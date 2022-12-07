@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
 public class ReadKey {
-    private static int choice;
 
     public static int readMenu() {
         Scanner scanner = new Scanner(System.in);
+        int choice;
 
         while (true) {
             while (!scanner.hasNextInt()) {
