@@ -17,6 +17,7 @@ public class Dictionary {
             System.out.println("Не удалось получить словарь");
             System.out.println(e.getMessage());
         }
+        dictionary = new String[temp.size()];
         temp.toArray(dictionary);
     }
 

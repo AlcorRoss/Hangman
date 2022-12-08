@@ -11,7 +11,7 @@ public class Hangman {
             if (choice == 2) {
                 break;
             } else if (choice == 1) {
-                //TODO
+                System.out.println(Dictionary.wordChoice());
             }
         }
     }
