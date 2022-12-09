@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ReadKey {
 
@@ -25,6 +27,7 @@ public class ReadKey {
     }
 
     public static String readCharacter() {
+        Pattern pattern = Pattern.compile("[а-яёА-ЯЁ]+");
         Scanner scanner = new Scanner(System.in);
         String line;
 
@@ -32,7 +35,9 @@ public class ReadKey {
 
         while (true) {
             line = scanner.next();
-            if (line.length() != 1) {
+            Matcher matcher = pattern.matcher(line);
+
+            if (line.length() != 1 || !matcher.find()) {
                 System.out.println("Некорректный ввод, попробуйте снова");
             } else {
                 line = line.toLowerCase();
