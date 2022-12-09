@@ -1,40 +1,47 @@
 public class Gameplay {
 
-    private static final String ERR_0 = "  |---|" + "\n" +
-            "      |" + "\n" +
-            "      |" + "\n" +
-            "      |" + "\n" +
-            "======|";
-    private static final String ERR_1 = "  |---|" + "\n" +
-            "  O   |" + "\n" +
-            "      |" + "\n" +
-            "      |" + "\n" +
-            "======|";
-    private static final String ERR_2 = "  |---|" + "\n" +
-            "  O   |" + "\n" +
-            " /    |" + "\n" +
-            "      |" + "\n" +
-            "======|";
-    private static final String ERR_3 = "  |---|" + "\n" +
-            "  O   |" + "\n" +
-            " /|   |" + "\n" +
-            "      |" + "\n" +
-            "======|";
-    private static final String ERR_4 = "  |---|" + "\n" +
-            "  O   |" + "\n" +
-            " /|\\  |" + "\n" +
-            "      |" + "\n" +
-            "======|";
-    private static final String ERR_5 = "  |---|" + "\n" +
-            "  O   |" + "\n" +
-            " /|\\  |" + "\n" +
-            " /    |" + "\n" +
-            "======|";
-    private static final String ERR_6 = "  |---|" + "\n" +
-            "  O   |" + "\n" +
-            " /|\\  |" + "\n" +
-            " / \\  |" + "\n" +
-            "======|";
+    private static final String ERR_0 = """
+              |---|
+                  |
+                  |
+                  |
+            ======|""";
+    private static final String ERR_1 = """
+              |---|
+              O   |
+                  |
+                  |
+            ======|""";
+    private static final String ERR_2 = """
+              |---|
+              O   |
+             /    |
+                  |
+            ======|""";
+    private static final String ERR_3 = """
+              |---|
+              O   |
+             /|   |
+                  |
+            ======|""";
+    private static final String ERR_4 = """
+              |---|
+              O   |
+             /|\\  |
+                  |
+            ======|""";
+    private static final String ERR_5 = """
+              |---|
+              O   |
+             /|\\  |
+             /    |
+            ======|""";
+    private static final String ERR_6 = """
+              |---|
+              O   |
+             /|\\  |
+             / \\  |
+            ======|""";
 
     public static void gameplay() {
         int loseCounter = 0;
