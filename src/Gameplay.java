@@ -52,6 +52,8 @@ public class Gameplay {
 
         st.append("_".repeat(word.length()));
 
+        System.out.println(st);
+
         while (true) {
 
             character = ReadKey.readCharacter();
