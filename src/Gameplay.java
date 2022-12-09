@@ -50,9 +50,7 @@ public class Gameplay {
         String character;
         StringBuilder st = new StringBuilder();
 
-        for (int i = 0; i < word.length(); i++) {
-            st.append("_");
-        }
+        st.append("_".repeat(word.length()));
 
         System.out.println(word);
 
