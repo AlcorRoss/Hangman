@@ -24,22 +24,22 @@ public class ReadKey {
         }
     }
 
-    public static char readChar() {
+    public static String readCharacter() {
         Scanner scanner = new Scanner(System.in);
-        char c;
+        String line;
 
         System.out.println("Введите букву");
 
         while (true) {
-            String line = scanner.next();
+            line = scanner.next();
             if (line.length() != 1) {
                 System.out.println("Некорректный ввод, попробуйте снова");
             } else {
-                c = line.toLowerCase().charAt(0);
+                line = line.toLowerCase();
                 break;
             }
         }
 
-        return c;
+        return line;
     }
 }
