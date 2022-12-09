@@ -5,20 +5,29 @@ public class Gameplay {
         int winCounter = 0;
         String word = Dictionary.wordChoice();
         String character;
-        StringBuilder st = new StringBuilder("______");
+        StringBuilder st = new StringBuilder();
+
+        for (int i = 0; i < word.length(); i++) {
+            st.append("_");
+        }
+
+        System.out.println(word);
 
         while (loseCounter <= 6) {
-            character = ReadKey.readCharacter();
 
             if (loseCounter == 6) {
                 System.out.println("Ты проиграл!");
                 System.out.println("Слово: " + word);
+                System.out.println("_________________________________________________" + "\n");
                 break;
             } else if (winCounter == word.length()) {
                 System.out.println("Ты победил!");
                 System.out.println("Слово: " + word);
+                System.out.println("_________________________________________________" + "\n");
                 break;
             }
+
+            character = ReadKey.readCharacter();
 
             if (word.contains(character)) {
                 for (int i = 0; i < word.length(); i++) {
