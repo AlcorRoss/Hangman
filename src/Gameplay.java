@@ -32,7 +32,7 @@ public class Gameplay {
             }
 
             System.out.println("Допущено ошибок: " + loseCounter);
-            System.out.println("Отгаданные буквы: " + st.toString());
+            System.out.println("Отгаданные буквы: " + st);
         }
 
     }
