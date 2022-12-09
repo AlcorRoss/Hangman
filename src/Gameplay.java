@@ -10,27 +10,27 @@ public class Gameplay {
             "      |" + "\n" +
             "      |" + "\n" +
             "======|";
-    private static final String err_2 = "  |---|" + "\n" +
+    private static final String ERR_2 = "  |---|" + "\n" +
             "  O   |" + "\n" +
             " /    |" + "\n" +
             "      |" + "\n" +
             "======|";
-    private static final String err_3 = "  |---|" + "\n" +
+    private static final String ERR_3 = "  |---|" + "\n" +
             "  O   |" + "\n" +
             " /|   |" + "\n" +
             "      |" + "\n" +
             "======|";
-    private static final String err_4 = "  |---|" + "\n" +
+    private static final String ERR_4 = "  |---|" + "\n" +
             "  O   |" + "\n" +
             " /|\\  |" + "\n" +
             "      |" + "\n" +
             "======|";
-    private static final String err_5 = "  |---|" + "\n" +
+    private static final String ERR_5 = "  |---|" + "\n" +
             "  O   |" + "\n" +
             " /|\\  |" + "\n" +
             " /    |" + "\n" +
             "======|";
-    private static final String err_6 = "  |---|" + "\n" +
+    private static final String ERR_6 = "  |---|" + "\n" +
             "  O   |" + "\n" +
             " /|\\  |" + "\n" +
             " / \\  |" + "\n" +
@@ -49,7 +49,7 @@ public class Gameplay {
 
         System.out.println(word);
 
-        while (loseCounter <= 6) {
+        while (true) {
 
             character = ReadKey.readCharacter();
 
@@ -65,31 +65,19 @@ public class Gameplay {
             }
 
             switch (loseCounter) {
-                case 0:
-                    System.out.println(ERR_0);
-                    break;
-                case 1:
-                    System.out.println(ERR_1);
-                    break;
-                case 2:
-                    System.out.println(err_2);
-                    break;
-                case 3:
-                    System.out.println(err_3);
-                    break;
-                case 4:
-                    System.out.println(err_4);
-                    break;
-                case 5:
-                    System.out.println(err_5);
-                    break;
+                case 0 -> System.out.println(ERR_0);
+                case 1 -> System.out.println(ERR_1);
+                case 2 -> System.out.println(ERR_2);
+                case 3 -> System.out.println(ERR_3);
+                case 4 -> System.out.println(ERR_4);
+                case 5 -> System.out.println(ERR_5);
             }
 
             System.out.println("Допущено ошибок: " + loseCounter);
             System.out.println("Отгаданные буквы: " + st);
 
             if (loseCounter == 6) {
-                System.out.println(err_6);
+                System.out.println(ERR_6);
                 System.out.println("Ты проиграл!");
                 System.out.println("Слово: " + word);
                 System.out.println("_________________________________________________" + "\n");
