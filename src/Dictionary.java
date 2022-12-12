@@ -1,31 +1,29 @@
 import java.io.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Dictionary {
-    private static String[] dictionary;
+    private final static List<String> dictionary = new ArrayList<>();
 
     public static void readDictionary() {
         String line;
-        ArrayList<String> temp = new ArrayList<>();
 
         try (BufferedReader bufReader = new BufferedReader(new FileReader("Dictionary.txt"), 1384448)) {
             while ((line = bufReader.readLine()) != null) {
-                temp.add(line);
+                dictionary.add(line);
             }
         } catch (IOException e) {
             System.out.println("Не удалось получить словарь");
             System.out.println(e.getMessage());
         }
-        dictionary = new String[temp.size()];
-        temp.toArray(dictionary);
     }
 
     public static String wordChoice() {
         Random r = new Random();
 
-        if (dictionary == null) readDictionary();
+        if (dictionary.isEmpty()) readDictionary();
 
-        return dictionary[r.nextInt(0, dictionary.length)];
+        return dictionary.get(r.nextInt(0, dictionary.size()));
     }
 }
