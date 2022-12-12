@@ -41,7 +41,7 @@ public enum Pictures {
              /|\\  |
              / \\  |
             ======|""");
-    private String picture;
+    private final String picture;
 
     Pictures(String picture) {
         this.picture = picture;
